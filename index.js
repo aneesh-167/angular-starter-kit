@@ -1,5 +1,5 @@
 
-var app = angular.module("myAngular", ['ngRoute', 'loginModule']);
+var app = angular.module("myAngular", ['ngRoute']);
 
 app.config(function ($routeProvider) {
     $routeProvider
@@ -26,14 +26,14 @@ app.component("empheader", {
     templateUrl: "header.html"
 })
 
-app.service("loginService", function () {
+app.service("loginService", function ($location) {
     this.login = function (userName, password) {
 
         if (userName == "Aneesh" && password == "123") {
-            alert("success");
+            $location.path("listemployee");
         }
         else {
-            alert("failed");
+            $location.path("/");
         }
     }
 });
