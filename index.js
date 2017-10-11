@@ -1,5 +1,9 @@
 
+<<<<<<< HEAD
 var app = angular.module("myAngular", ['ngRoute']);
+=======
+var app = angular.module("myAngular", ['ngRoute', 'loginModule']);
+>>>>>>> 49699c93f54a631d9be4feafc296b257294ffaea
 
 app.config(function ($routeProvider) {
     $routeProvider
@@ -25,6 +29,7 @@ app.config(function ($routeProvider) {
 app.component("empheader", {
     templateUrl: "header.html"
 })
+
 
 app.service("loginService", function ($location) {
     this.login = function (userName, password) {
