@@ -1,0 +1,18 @@
+{
+  "name": "angularstarter",
+  "version": "1.0.0",
+  "description": "angular starter app ",
+  "main": "index.js",
+  "scripts": {
+    "test": "app-test"
+  },
+  "author": "Aneesh",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.6.6",
+    "angular-route": "^1.6.6",
+    "bootstrap": "^3.3.7",
+    "http-server": "^0.10.0",
+    "jquery": "^3.2.1"
+  }
+}

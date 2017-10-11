@@ -1,0 +1,48 @@
+<html>
+<head>
+    <link rel="stylesheet" href="..\node_modules\bootstrap\dist\css\bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="..\node_modules\jquery\dist\jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="..\node_modules\bootstrap\dist\js\bootstrap.min.js"></script>
+
+    <script src="..\node_modules\angular\angular.min.js"></script>
+    <script src="..\node_modules\angular-route\angular-route.min.js"></script>
+
+    <link rel="stylesheet" href="..\css\listemployee.css">
+
+</head>
+<body>
+    <div class="container">
+        <empheader></empheader>       
+        <div class="wrapper">
+            <form class="emplyee-add">
+                <h2 class="form-signin-heading">Add Employee</h2>
+                <div class="form-group">
+                    <label for="firstname">First Name</label>
+                    <input id="firstname>" type="text" class="form-control" placeholder="Enter FirstName" name="firstname">
+                </div>
+                <div class="form-group">
+                    <label for="lastname">Last Name</label>
+                    <input id="lastname" type="text" class="form-control" placeholder="Enter LastName" name="lastname">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                </div>
+                <div class="form-group">
+                    <label for="age">Age</label>
+                    <input type="text" class="form-control" id="age" placeholder="Enter Age" name="age">
+                </div>
+                <div class="clearfix">
+                    <button type="submit" class="btn btn-secondary float-left">Cancel</button>
+                    <button type="submit" class="btn btn-secondary float-right">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
