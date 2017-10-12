@@ -1,9 +1,10 @@
 var app = angular.module("myAngular", ['ngRoute']);
+app.service("loginService", loginService);
 app.config(function ($routeProvider) {
     $routeProvider
         .when("/", {
             templateUrl: "view/login.html",
-            controller: 'loginController',
+            controller: loginController,
             controllerAs: 'loginCtrl'
         })
         .when("/addemployee", {
@@ -22,25 +23,4 @@ app.config(function ($routeProvider) {
 
 app.component("empheader", {
     templateUrl: "header.html"
-})
-
-
-app.service("loginService", function ($location) {
-    this.login = function (userName, password) {
-
-        if (userName == "Aneesh" && password == "123") {
-            $location.path("listemployee");
-        }
-        else {
-            $location.path("/");
-        }
-    }
-});
-
-app.controller("loginController", function ($scope, loginService) {
-
-    this.login = function () {
-        loginService.login($scope.userName, $scope.password);
-    }
-
 });
