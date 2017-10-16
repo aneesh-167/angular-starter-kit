@@ -1,5 +1,6 @@
 var app = angular.module("myAngular", ['ngRoute']);
 app.service("loginService", loginService);
+app.service("employeeService", employeeService);
 app.config(function ($routeProvider) {
     $routeProvider
         .when("/", {
@@ -9,13 +10,13 @@ app.config(function ($routeProvider) {
         })
         .when("/addemployee", {
             templateUrl: "view/addemployee.html",
-            //controller: addEmployeeController,
-            //controllerAs: 'addEmpCtrl'
+            controller: employeeController,
+            controllerAs: 'empCtrl'
         })
         .when("/listemployee", {
             templateUrl: "view/listemployee.html",
-            //controller: listEmployeeController,
-            //controllerAs: 'listEmpCtrl'
+            controller: employeeController,
+            controllerAs: 'empCtrl'
         })
         .otherwise({ redirectTo: '/' })
 });

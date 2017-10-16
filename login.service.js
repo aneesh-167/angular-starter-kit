@@ -1,13 +1,8 @@
-loginService.$inject = ['$location'];
-function loginService($location) {
-    this.login = function (userName, password, x) {
+loginService.$inject = ['$http'];
+function loginService($http) {
+    this.login = function (userName, password) {
 
-        // if (userName == "Aneesh" && password == "123") {
-        //     $location.path("listemployee");
-        // }
-        // else {
-        //     $location.path("/");
-        // }
-        x();
+        var parameter = JSON.stringify({ UserName: userName, Password: password });
+        return $http.post("http://localhost:3877/api/login", parameter);            
     }
 }
